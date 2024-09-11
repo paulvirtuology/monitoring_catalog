@@ -1,0 +1,4 @@
+venv/
+scrapy_spider.log
+credentials.json
+.env

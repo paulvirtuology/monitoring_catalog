@@ -1,0 +1,9 @@
+scrapy
+pandas
+gspread
+google-auth
+requests
+google.cloud
+google-cloud-bigquery
+pandas_gbq
+python-dotenv
