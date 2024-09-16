@@ -19,9 +19,9 @@ dotenv = find_dotenv()
 load_dotenv(dotenv)
 
 logging.basicConfig(
-    filename='scrapy_spider.log', 
+    filename='scrapy_spider.log',
     format='%(asctime)s - %(levelname)s - %(message)s',
-    level=logging.INFO  
+    level=logging.WARNING  # Niveau global des logs à partir de WARNING
 )
 # Définir les variables globales pour l'authentification
 API_KEY=os.environ.get("SCRAPERAPI")
@@ -68,7 +68,7 @@ class MySpider(scrapy.Spider):
         'AUTOTHROTTLE_TARGET_CONCURRENCY': 80,
         'RETRY_TIMES': 3,
         'RETRY_HTTP_CODES': [429, 500, 502, 503, 504, 403, 408, 202],
-        'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7'
+        'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
         'LOG_LEVEL': 'WARNING'
     }
 
